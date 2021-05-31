@@ -7,31 +7,36 @@ using UnityEngine.SceneManagement;
 public class health : MonoBehaviour
 {
     public int curHealth = 0;
-    public int maxHealth = 100;
-    public float timeRemaining = 10;
+    public int maxHealth = 10;
+    public float timeRemaining = 5;
     public bool timerIsRunning = false;
     public Text timeText;
-    public Button instrumentButton;
+    public Button PlayerButton;
+    public Button Powerup1;
+    public Button Powerup2;
+    public Button Powerup3;
+    public Button Powerup4;
+    public Button Powerup5;
+    public Button Powerup6;
+    public GameObject GameOverScreen;
 
     public HealthBar healthBar;
 
+    public int Hitpower;
+    public int dmgs;
     // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
         timerIsRunning = true;
+        InvokeRepeating("HitDmgs", 1f, 1f);
+
+        healthBar.GetComponent<HealthBar>().healtbarSet();
     }
 
     // Update is called once per frame
     void Update()
-
-
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DamagePlayer(1);
-        }
-
         //timer
         if (timerIsRunning)
         {
@@ -39,26 +44,20 @@ public class health : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                if(curHealth <= 0)
+                {
+
+                    NextMonster();
+                }
             }
             else
             {
-                if (curHealth <= 0)
-                {
-
-                    Debug.Log("Zabiłeś potwora na czas, gratulacje");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
-                }
-                else
-                {
-
-
                     Debug.Log("Czas się skończył");
                     DisableButton();
+                    //PauseGame();
                     timeRemaining = 0;
                     timerIsRunning = false;
-
-                }
+                    GameOverScreen.SetActive(true);
 
             }
         }
@@ -70,10 +69,15 @@ public class health : MonoBehaviour
 
         healthBar.SetHealth(curHealth);
     }
-
+    public void HitDmgs()
+    {
+        dmgs = (int)gameObject.GetComponent<Game>().x;
+        DamagePlayer(dmgs);
+    }
     public void Hit2()
     {
-        DamagePlayer(1);
+        Hitpower = (int)gameObject.GetComponent<Game>().hitPower;
+        DamagePlayer(Hitpower);
     }
 
     void DisplayTime(float timeToDisplay)
@@ -88,7 +92,31 @@ public class health : MonoBehaviour
 
     public void DisableButton()
     {
-        instrumentButton.interactable = false;
+        PlayerButton.interactable = false;
+        Powerup1.interactable = false;
+        Powerup2.interactable = false;
+        Powerup3.interactable = false;
+        Powerup4.interactable = false;
+        Powerup5.interactable = false;
+        Powerup6.interactable = false;
+    }
+
+    void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+
+    void NextMonster()
+    {
+        maxHealth = (int)(maxHealth * 1.5);
+        timeRemaining = timeRemaining + 5;
+        curHealth = maxHealth;
+        healthBar.GetComponent<HealthBar>().SetHealth(maxHealth);
+        healthBar.GetComponent<HealthBar>().healtbarSet();
+        healthBar.GetComponent<HealthBar>().MaxValueSet(maxHealth);
+        Debug.Log("Zabiłeś potwora na czas, gratulacje");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }

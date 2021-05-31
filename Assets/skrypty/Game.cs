@@ -52,7 +52,10 @@ public class Game : MonoBehaviour
     public Text allUpgradeText;
 
 
+    //Particles
 
+    public GameObject plusObject;
+    public Text plusText;
 
     void Start()
     {
@@ -62,34 +65,7 @@ public class Game : MonoBehaviour
         x = 0f;
 
 
-        //ŁADOWANIE TRZEBA PODPIĄĆ POD PRZYCISK
-
-        ////set to defaults
-        //shop1prize = 25;
-        //shop2prize = 125;
-        //amount1 = 0;
-        //amount1Profit = 1;
-        //amount2 = 0;
-        //amount2Profit = 5;
-
-        ////reset
-        //PlayerPrefs.DeleteAll();
-
-        ////load
-
-        //currentScore = PlayerPrefs.GetInt("currentScore", 0);
-        //hitPower = PlayerPrefs.GetInt("hitPower", 1);
-        //x = PlayerPrefs.GetInt("x", 0);
-
-        //shop1prize = PlayerPrefs.GetInt("shop1prize", 25);
-        //shop2prize = PlayerPrefs.GetInt("shop2prize", 125);
-        //amount1 = PlayerPrefs.GetInt("amount1", 0);
-        //amount1Profit = PlayerPrefs.GetInt("amount1Profit", 0);
-        //amount2=  PlayerPrefs.GetInt("amount2", 0);
-        //amount2Profit = PlayerPrefs.GetInt("amount2Profit", 0);
-        //upgradePrize = PlayerPrefs.GetInt("upgradePrize", 50);
-
-        //allUpgradePrize = 500;
+      
 
     }
 
@@ -114,25 +90,25 @@ public class Game : MonoBehaviour
         upgradeText.text = "" + upgradePrize + " zł";
         hitpowerText.text = "" + hitPower;
 
-        //SAVE TRZEBA PODPIAC POD PRZYCISK
-        ////save
-        //PlayerPrefs.SetInt("currentScore", (int)currentScore);
-        //PlayerPrefs.SetInt("hitPower", (int)hitPower);
-        //PlayerPrefs.SetInt("x", (int)x);
-        //PlayerPrefs.SetInt("shop1prize", (int)shop1prize);
-        //PlayerPrefs.SetInt("shop2prize", (int)shop2prize);
-        //PlayerPrefs.SetInt("amount1", (int)amount1);
-        //PlayerPrefs.SetInt("amount1Profit", (int)amount1Profit);
-        //PlayerPrefs.SetInt("amount2", (int)amount2);
-        //PlayerPrefs.SetInt("amount2Profit", (int)amount2Profit);
-        //PlayerPrefs.SetInt("upgradePrize", (int)upgradePrize);
-
         allUpgradeText.text =""+allUpgradePrize + " zł";
+
+        plusText.text = "+ " + hitPower;
     }
 
     public void Hit()
     {
         currentScore += hitPower;
+
+        plusObject.SetActive(false);
+
+        plusObject.transform.position = new Vector3(Random.Range(400, 700 + 1), Random.Range(1000, 1200 + 1), 0);
+        //
+        //
+
+        plusObject.SetActive(true);
+
+        StopAllCoroutines();
+        StartCoroutine(Fly());
     }
 
     //Shop
@@ -205,6 +181,16 @@ public class Game : MonoBehaviour
             allUpgradePrize *= 3;
             amount1Profit *= 2;
             amount2Profit *= 2;
+        }
+    }
+
+    IEnumerator Fly()
+    {
+        for(int i=0;i<=19;i++)
+        {
+            yield return new WaitForSeconds(0.01f);
+
+            plusObject.transform.position = new Vector3(plusObject.transform.position.x, plusObject.transform.position.y + 2, 0);
         }
     }
 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F4D56BE6-1453-1F90-BB38-B33EBC604424}</ProjectGuid>
+    <ProjectGuid>{6A226719-5A98-9F20-D787-7F76C2EDF6B9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,6 +60,8 @@
     <Compile Include="Assets/skrypty/health.cs" />
     <Compile Include="Assets/skrypty/HealthBar.cs" />
     <Compile Include="Assets/skrypty/move.cs" />
+    <Compile Include="Assets/skrypty/GameOverScreen.cs" />
+    <Compile Include="Assets/skrypty/Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -659,51 +661,51 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{E7241D31-8148-1410-1590-DB9CF63004B8}</Project>
+      <Project>{2B51F94F-A6F7-969F-9925-01DB7E5092DA}</Project>
       <Name>Unity.InternalAPIEngineBridge.001</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{07CFF76B-1586-E92D-F751-D0D427533381}</Project>
+      <Project>{3193303A-2CDC-4665-F8EF-4A60E0948A77}</Project>
       <Name>Unity.2D.PixelPerfect</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{CF1D062C-ACE0-1C6D-0C67-5A09545E0D91}</Project>
+      <Project>{95CDBD33-D4F8-ACF2-8E8E-2205AFA7F52A}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{C0923425-2A08-D027-1281-91B3384D43C1}</Project>
+      <Project>{0218514D-0E8B-3A3B-328B-74994612148C}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{D80BE769-D308-6E91-74FE-02910DA98D4E}</Project>
+      <Project>{43B33096-DC6F-6375-D5AF-1628D28E6E6D}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{5F1B2AFE-2621-D1EA-7FA7-FC5A4A273314}</Project>
+      <Project>{DF8E9FEB-DD33-CA66-7575-B6E593F7F10C}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{D948A6C5-558F-0167-F4EC-BF085FEEB62D}</Project>
+      <Project>{7DD1C203-EC01-E40A-16F3-41BF7A223FA2}</Project>
       <Name>Unity.2D.IK.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
-      <Project>{0B3FCF2C-2C7A-EB70-DDB8-65722615F24E}</Project>
+      <Project>{D96C4E73-0579-8170-F545-C8700A2D3E00}</Project>
       <Name>Unity.2D.Animation.Triangle.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{361EFD46-ABAC-B613-9013-D8623AC3E856}</Project>
+      <Project>{FB693C78-6177-801D-14B7-6C8F2902E76F}</Project>
       <Name>Unity.2D.Animation.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{E94FF327-AED0-9820-C251-5CC09F482DF8}</Project>
+      <Project>{BBA58226-6563-6A81-159D-A7B3865C7772}</Project>
       <Name>Unity.2D.Common.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{320DAAF3-8A46-CD62-066F-E9FCD3AD46B1}</Project>
+      <Project>{16D112B5-573E-EDB7-6565-09652FA3C444}</Project>
       <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{DEB3D019-9773-768B-5399-FB5CF7478199}</Project>
+      <Project>{801ADDF9-1FA5-C193-F789-FC60FAB4F169}</Project>
       <Name>Unity.2D.SpriteShape.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

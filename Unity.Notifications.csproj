@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5A5EFC70-0808-0DEB-B032-5806794D81DF}</ProjectGuid>
+    <ProjectGuid>{30238536-7DCA-5837-3620-638CABCA81BA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Notifications</AssemblyName>
@@ -670,27 +670,27 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Notifications.iOS.csproj">
-      <Project>{FE614655-4B12-213A-8BB6-2D0E9013B653}</Project>
+      <Project>{B57BEEF6-0978-A05A-E0C4-0A927DC2C6B9}</Project>
       <Name>Unity.Notifications.iOS</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{320DAAF3-8A46-CD62-066F-E9FCD3AD46B1}</Project>
+      <Project>{16D112B5-573E-EDB7-6565-09652FA3C444}</Project>
       <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{5A80AF64-74EA-511B-3696-13F68663BFF0}</Project>
+      <Project>{296CBE34-AAFA-129D-31B4-FF05398DA797}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{D80BE769-D308-6E91-74FE-02910DA98D4E}</Project>
+      <Project>{43B33096-DC6F-6375-D5AF-1628D28E6E6D}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{421177D3-6F23-A701-D489-08F826DB27CB}</Project>
+      <Project>{DD70E00A-EA4D-E24D-D49F-576BA5D09075}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{BA1F8EF2-B3F9-995C-E571-09C0079283BF}</Project>
+      <Project>{DB5268E7-0581-76D2-A9E8-1016292EA181}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
