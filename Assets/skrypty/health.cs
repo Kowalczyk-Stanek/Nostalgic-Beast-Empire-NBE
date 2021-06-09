@@ -19,6 +19,10 @@ public class health : MonoBehaviour
     public Button Powerup5;
     public Button Powerup6;
     public GameObject GameOverScreen;
+    public GameObject Day;
+    public GameObject Afternoon;
+    public GameObject Night;
+    public int i = 0;
 
     public HealthBar healthBar;
 
@@ -61,6 +65,26 @@ public class health : MonoBehaviour
 
             }
         }
+
+        if (i > 5)
+        {
+            Day.SetActive(false);
+            Afternoon.SetActive(true);
+
+        }
+        else if (i>20)
+        {
+            Afternoon.SetActive(false);
+            Night.SetActive(true);
+
+        }
+        else if (i > 30)
+        {
+            Night.SetActive(false);
+            Day.SetActive(true);
+
+        }
+
     }
 
     public void DamagePlayer(int damage)
@@ -93,9 +117,6 @@ public class health : MonoBehaviour
     public void DisableButton()
     {
         PlayerButton.interactable = false;
-        Powerup1.interactable = false;
-        Powerup2.interactable = false;
-        Powerup3.interactable = false;
         Powerup4.interactable = false;
         Powerup5.interactable = false;
         Powerup6.interactable = false;
@@ -115,6 +136,8 @@ public class health : MonoBehaviour
         healthBar.GetComponent<HealthBar>().SetHealth(maxHealth);
         healthBar.GetComponent<HealthBar>().healtbarSet();
         healthBar.GetComponent<HealthBar>().MaxValueSet(maxHealth);
+        i++;
+        
         Debug.Log("Zabiłeś potwora na czas, gratulacje");
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

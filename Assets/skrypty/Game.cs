@@ -17,14 +17,6 @@ public class Game : MonoBehaviour
     public int shop1prize;
     public Text shop1text;
 
-    public int shop2prize;
-    public Text shop2text;
-
-    public int shop3prize;
-    public Text shop3text;
-
-    public int shop4prize;
-    public Text shop4text;
     //Amount
 
     public Text amounttext;
@@ -33,14 +25,7 @@ public class Game : MonoBehaviour
     public int amount1;
     public float amount1Profit;
 
-    public int amount2;
-    public float amount2Profit;
 
-    public int amount3;
-    public float amount3Profit;
-
-    public int amount4;
-    public float amount4Profit;
 
 
     //Upgrade
@@ -78,12 +63,10 @@ public class Game : MonoBehaviour
 
         //Shop
         shop1text.text = "  " + shop1prize + " zł";
-        shop2text.text = "  " + shop2prize + " zł";
-        shop3text.text = "  " + shop3prize + " zł";
-        shop4text.text = "  " + shop4prize + " zł";
+
 
         //Amount 
-        amountsum = Mathf.RoundToInt(amount1Profit + (float)amount2Profit);
+       
         amounttext.text = Mathf.RoundToInt((float)x)+" ";
 
         //Upgrade
@@ -113,7 +96,7 @@ public class Game : MonoBehaviour
 
     //Shop
 
-    public void shop1()
+    public void DamagePerSecondUpgrade()
     {
         if (currentScore >= shop1prize)
         {
@@ -125,43 +108,8 @@ public class Game : MonoBehaviour
         } 
     }
 
-    public void shop2()
-    {
-        if (currentScore >= shop2prize)
-        {
-            currentScore -= shop2prize;
-            amount2 += 1;
-            amount2Profit += 5;
-            x += 5;
-            shop2prize = Mathf.RoundToInt((float)shop1prize * (float)1.5);
-        }
-    }
 
-    public void shop3()
-    {
-        if (currentScore >= shop3prize)
-        {
-            currentScore -= shop3prize;
-            amount3 += 1;
-            amount3Profit += 10;
-            x += 10;
-            shop3prize = Mathf.RoundToInt((float)shop1prize * (float)1.5);
-        }
-    }
-
-    public void shop4()
-    {
-        if (currentScore >= shop4prize)
-        {
-            currentScore -= shop4prize;
-            amount4 += 1;
-            amount4Profit += 15;
-            x += 15;
-            shop4prize = Mathf.RoundToInt((float)shop1prize * (float)1.5);
-        }
-    }
-
-    public void Upgrade()
+    public void HitDamageUprage()
     {
         if (currentScore >= upgradePrize)
         {
@@ -177,10 +125,9 @@ public class Game : MonoBehaviour
         if(currentScore>=allUpgradePrize)
         {
             currentScore -= allUpgradePrize;
-            x *= 2;
             allUpgradePrize *= 3;
-            amount1Profit *= 2;
-            amount2Profit *= 2;
+            hitPower *= 2;
+            x += 1;
         }
     }
 
