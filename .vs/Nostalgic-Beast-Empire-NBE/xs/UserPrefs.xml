@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{7FF0BF4F-2678-5264-AAA2-5D99872BD80A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/skrypty/health.cs">
+    <Files>
+      <File FileName="Assets/skrypty/move.cs" Line="8" Column="5" />
+      <File FileName="Assets/skrypty/health.cs" Line="82" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Nostalgic-Beast-Empire-NBE" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="skrypty" expanded="True">
+                <Node name="health.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4ecd18c6-7513-4d04-889f-1a930991a4d4" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

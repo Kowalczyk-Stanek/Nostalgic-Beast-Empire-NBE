@@ -12,9 +12,6 @@ public class health : MonoBehaviour
     public bool timerIsRunning = false;
     public Text timeText;
     public Button PlayerButton;
-    public Button Powerup1;
-    public Button Powerup2;
-    public Button Powerup3;
     public Button Powerup4;
     public Button Powerup5;
     public Button Powerup6;
@@ -22,6 +19,10 @@ public class health : MonoBehaviour
     public GameObject Day;
     public GameObject Afternoon;
     public GameObject Night;
+    public GameObject A1;
+    public GameObject A2;
+    public GameObject A3;
+    public GameObject Achivements;
     public int i = 0;
 
     public HealthBar healthBar;
@@ -34,6 +35,8 @@ public class health : MonoBehaviour
         curHealth = maxHealth;
         timerIsRunning = true;
         InvokeRepeating("HitDmgs", 1f, 1f);
+        
+
 
         healthBar.GetComponent<HealthBar>().healtbarSet();
     }
@@ -41,6 +44,7 @@ public class health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //timer
         if (timerIsRunning)
         {
@@ -66,26 +70,34 @@ public class health : MonoBehaviour
             }
         }
 
-        if (i > 5)
+        if (i > 2&& i<5)
         {
             Day.SetActive(false);
             Afternoon.SetActive(true);
+            Achivements.SetActive(true);
+            A1.SetActive(true);
+
 
         }
-        else if (i>20)
+        else if (i>5&& i<8)
         {
             Afternoon.SetActive(false);
             Night.SetActive(true);
+            A2.SetActive(true);
 
         }
-        else if (i > 30)
+        else if (i > 8)
         {
             Night.SetActive(false);
             Day.SetActive(true);
+            A3.SetActive(true);
+
 
         }
 
     }
+
+
 
     public void DamagePlayer(int damage)
     {

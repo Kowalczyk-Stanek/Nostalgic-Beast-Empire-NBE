@@ -5,8 +5,9 @@ using UnityEngine;
 public class move : MonoBehaviour
 
 {
-    public float speed = 2.0f;
+    public float speed = 0.5f;
     public float dropoffPosition = 4f;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -30,7 +31,7 @@ public class move : MonoBehaviour
         {
            
            
-            gameObject.transform.position = new Vector4(-500, 1500, 0);
+            gameObject.transform.position = new Vector4(400,1000,-822);
         }
 
     }
