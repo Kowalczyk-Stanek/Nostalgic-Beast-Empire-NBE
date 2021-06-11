@@ -25,13 +25,18 @@ public class health : MonoBehaviour
     public GameObject Achivements;
     public int i = 0;
 
+    public GameObject monsterSprite;
+    private Animator animator;
     public HealthBar healthBar;
+
 
     public int Hitpower;
     public int dmgs;
     // Start is called before the first frame update
     void Start()
     {
+
+        animator = monsterSprite.GetComponent<Animator>();
         curHealth = maxHealth;
         timerIsRunning = true;
         InvokeRepeating("HitDmgs", 1f, 1f);
@@ -68,31 +73,6 @@ public class health : MonoBehaviour
                     GameOverScreen.SetActive(true);
 
             }
-        }
-
-        if (i > 2&& i<5)
-        {
-            Day.SetActive(false);
-            Afternoon.SetActive(true);
-            Achivements.SetActive(true);
-            A1.SetActive(true);
-
-
-        }
-        else if (i>5&& i<8)
-        {
-            Afternoon.SetActive(false);
-            Night.SetActive(true);
-            A2.SetActive(true);
-
-        }
-        else if (i > 8)
-        {
-            Night.SetActive(false);
-            Day.SetActive(true);
-            A3.SetActive(true);
-
-
         }
 
     }
@@ -149,9 +129,52 @@ public class health : MonoBehaviour
         healthBar.GetComponent<HealthBar>().healtbarSet();
         healthBar.GetComponent<HealthBar>().MaxValueSet(maxHealth);
         i++;
-        
+        StageChange(i);
+        animator.runtimeAnimatorController = (RuntimeAnimatorController)Resources.Load("Animation/"+Random.Range(1,19), typeof(RuntimeAnimatorController));
         Debug.Log("Zabiłeś potwora na czas, gratulacje");
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void StageChange(int stage)
+    {
+        if(stage == 2)
+        {
+            Day.SetActive(false);
+            Afternoon.SetActive(true);
+            Night.SetActive(false);
+
+            Achivements.SetActive(true);
+            A1.SetActive(true);
+            Invoke("AchivementsHide", 5);
+        }
+        else if(stage == 7)
+        {
+            Day.SetActive(false);
+            Afternoon.SetActive(false);
+            Night.SetActive(true);
+
+            Achivements.SetActive(true);
+            A2.SetActive(true);
+            Invoke("AchivementsHide", 5);
+        }
+        else if(stage == 17)
+        {
+            Day.SetActive(true);
+            Afternoon.SetActive(false);
+            Night.SetActive(false);
+
+            Achivements.SetActive(true);
+            A3.SetActive(true);
+            Invoke("AchivementsHide", 5);
+        }
+
+    }
+    void AchivementsHide()
+    {
+        Achivements.SetActive(false);
+        A1.SetActive(false);
+        A2.SetActive(false);
+        A3.SetActive(false);
     }
 
 }
+

@@ -8,6 +8,7 @@ public class move : MonoBehaviour
     public float speed = 0.5f;
     public float dropoffPosition = 4f;
 
+   // public float x, y, z = 1;
 
     // Start is called before the first frame update
     void Start() {
@@ -31,7 +32,7 @@ public class move : MonoBehaviour
         {
            
            
-            gameObject.transform.position = new Vector4(400,1000,-822);
+            gameObject.transform.position = new Vector4(Random.Range(-1000,-700), Random.Range(1000, 1500), 5);
         }
 
     }
