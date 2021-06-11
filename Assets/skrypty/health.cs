@@ -136,7 +136,7 @@ public class health : MonoBehaviour
 
     void StageChange(int stage)
     {
-        if(stage == 2)
+        if(stage == 5)
         {
             Day.SetActive(false);
             Afternoon.SetActive(true);
@@ -146,7 +146,7 @@ public class health : MonoBehaviour
             A1.SetActive(true);
             Invoke("AchivementsHide", 5);
         }
-        else if(stage == 7)
+        else if(stage == 15)
         {
             Day.SetActive(false);
             Afternoon.SetActive(false);
@@ -156,7 +156,7 @@ public class health : MonoBehaviour
             A2.SetActive(true);
             Invoke("AchivementsHide", 5);
         }
-        else if(stage == 17)
+        else if(stage == 25)
         {
             Day.SetActive(true);
             Afternoon.SetActive(false);

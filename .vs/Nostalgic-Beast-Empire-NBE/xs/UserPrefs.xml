@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{7FF0BF4F-2678-5264-AAA2-5D99872BD80A}|">
+﻿<Properties StartupConfiguration="{C5C8CD48-ED53-28B9-7866-494DAB3480A7}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/skrypty/health.cs">
     <Files>
       <File FileName="Assets/skrypty/move.cs" Line="8" Column="5" />
-      <File FileName="Assets/skrypty/health.cs" Line="82" Column="27" />
+      <File FileName="Assets/skrypty/health.cs" Line="159" Column="28" />
+      <File FileName="Assets/skrypty/Game.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4ecd18c6-7513-4d04-889f-1a930991a4d4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6351f8ce-44c1-426a-8926-1d844098ca66" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
