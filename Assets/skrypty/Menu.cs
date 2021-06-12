@@ -7,7 +7,12 @@ public class Menu : MonoBehaviour
 {
     public GameObject OptionsScreen;
     public GameObject MenuScreen;
+    public GameObject PauseMenu;
     private bool Muted;
+
+    public GameObject UnmuteButton;
+    public GameObject MuteButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +40,37 @@ public class Menu : MonoBehaviour
         OptionsScreen.SetActive(true);
        
     }
+    public void Pause()
+    {
+        PauseMenu.SetActive(true);
+        Time.timeScale = 0;
+
+    }
+    public void Resume()
+    {
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1;
+
+    }
     public void Mute()
     {
         Muted = !Muted;
         AudioListener.pause = Muted;
+
+
+    }
+    public void MuteGame()
+    {
+        Muted = !Muted;
+        AudioListener.pause = Muted;
+
+
+        if (Muted == false)
+        {
+            AudioListener.pause = Muted;
+
+        }
+
 
     }
     public void Unmute()

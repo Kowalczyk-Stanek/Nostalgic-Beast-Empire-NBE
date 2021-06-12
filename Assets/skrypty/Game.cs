@@ -42,6 +42,8 @@ public class Game : MonoBehaviour
     public GameObject plusObject;
     public Text plusText;
 
+
+
     void Start()
     {
         currentScore = 0;
@@ -78,6 +80,8 @@ public class Game : MonoBehaviour
         plusText.text = "+ " + hitPower;
     }
 
+
+
     public void Hit()
     {
         currentScore += hitPower;
@@ -85,8 +89,7 @@ public class Game : MonoBehaviour
         plusObject.SetActive(false);
 
         plusObject.transform.position = new Vector3(Random.Range(400, 700 + 1), Random.Range(1000, 1200 + 1), 0);
-        //
-        //
+
 
         plusObject.SetActive(true);
 

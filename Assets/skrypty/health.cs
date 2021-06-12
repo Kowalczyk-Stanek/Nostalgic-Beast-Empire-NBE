@@ -16,6 +16,7 @@ public class health : MonoBehaviour
     public Button Powerup5;
     public Button Powerup6;
     public GameObject GameOverScreen;
+    public GameObject PauseButton;
     public GameObject Day;
     public GameObject Afternoon;
     public GameObject Night;
@@ -70,6 +71,7 @@ public class health : MonoBehaviour
                     //PauseGame();
                     timeRemaining = 0;
                     timerIsRunning = false;
+                    PauseButton.SetActive(false);
                     GameOverScreen.SetActive(true);
 
             }
