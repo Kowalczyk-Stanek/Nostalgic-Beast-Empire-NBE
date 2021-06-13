@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{C5C8CD48-ED53-28B9-7866-494DAB3480A7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/skrypty/Game.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/skrypty/Menu.cs">
     <Files>
       <File FileName="Assets/skrypty/move.cs" Line="8" Column="5" />
       <File FileName="Assets/skrypty/health.cs" />
       <File FileName="Assets/skrypty/Game.cs" Line="45" Column="1" />
-      <File FileName="Assets/skrypty/Menu.cs" />
+      <File FileName="Assets/skrypty/Menu.cs" Line="60" Column="9" />
       <File FileName="Assets/skrypty/GameOverScreen.cs" />
     </Files>
     <Pads>
@@ -13,7 +13,7 @@
           <Node name="Nostalgic-Beast-Empire-NBE" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="skrypty" expanded="True">
-                <Node name="move.cs" selected="True" />
+                <Node name="Menu.cs" selected="True" />
               </Node>
             </Node>
           </Node>
